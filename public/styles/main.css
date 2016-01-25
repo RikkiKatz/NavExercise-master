@@ -22,37 +22,42 @@ Translucent Black: rgba(0, 0, 0, 0.5);
 ---------------*/
 
 body {
-  color: #fff;
+  background-image: url(../images/background-image.jpg);
 }
 
-.body-bg {
-  background-image: url(../images/background-image.jpg) no-repeat;
-}
-
-.container-fluid{
+.navbar-default{
   background: #ec008c;
+  border: none;
+  border-radius: 0px;
 }
 
-.navbar-custom .navbar-nav .open .dropdown-menu>li>a,.navbar-custom .navbar-nav .open .dropdown-menu {
-  color: black !important;
+.navbar-custom .navbar-nav .open .dropdown-menu  > li > a{
+  color: black;
 }
 
-
-/* Hamburger menu pull left no border */
-.navbar-toggle{
+/* Hamburger menu pull left no border*/
+.navbar-toggle {
   float: left;
   border: none;
 }
 
-ul.nav a{ 
-  @media (min-width: @screen-sm-min){ 
-    color: #fff !important; 
+.navbar-default .navbar-nav>li>a{
+  color: #fff;
+}
+
+
+ul.nav a {
+  color: #fff;
+  &:hover {
+    color: #ec008c;
+    background: #fff;
   }
 }
 
-ul.nav a:hover { 
-  color: #ec008c !important; 
-  background: #fff !important;
+/* Navbar brand- white HUGE logo */
+.nav-brand{
+  width: 50px;
+  height: 20px;
 }
 
 h1 {
@@ -63,7 +68,7 @@ h1 {
   transform: translate(-50%, -50%);
   margin: 0;
   font: HUGEAvantGardeBold;
-  font-size: 120px !important;
+  font-size: 120px;
   letter-spacing: -0.06em;
   text-align: center;
   color: #fff;
