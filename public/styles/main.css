@@ -1,15 +1,15 @@
 @import "fonts.css";
 
-/*---------------
+/*-------------------------
 Styles
------------------
+---------------------------
 
 Media Queries
 
 Mobile: <768px;
 Desktop: >= 768px;
 
------------------
+----------------------------
 
 Colors
 
@@ -19,11 +19,30 @@ White: #fff;
 Translucent Black: rgba(0, 0, 0, 0.5);
 
 
----------------*/
+/*----------- Body -----------*/
 
 body {
   background-image: url(../images/background-image.jpg);
 }
+
+ 
+/*------ Hamburger menu ------*/
+
+.navbar-toggle {
+  float: left;
+  border: none;
+}
+
+
+/*------- Navbar brand ------- */
+
+.nav-brand{
+  width: 50px;
+  height: 20px;
+}
+
+
+/*---- Primary Navigation ----*/
 
 .navbar-default{
   background: #ec008c;
@@ -31,34 +50,32 @@ body {
   border-radius: 0px;
 }
 
-.navbar-custom .navbar-nav .open .dropdown-menu  > li > a{
-  color: black;
-}
-
-/* Hamburger menu pull left no border*/
-.navbar-toggle {
-  float: left;
-  border: none;
-}
-
 .navbar-default .navbar-nav>li>a{
   color: #fff;
 }
 
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  color: #ec008c;
+  background:  #fff;
+}
 
+
+/*--- Secondary Navigation ---*/
+
+.dropdown-menu{
+  border-radius: 0px;
+}
 ul.nav a {
-  color: #fff;
-  &:hover {
-    color: #ec008c;
-    background: #fff;
-  }
+  color: black;
 }
 
-/* Navbar brand- white HUGE logo */
-.nav-brand{
-  width: 50px;
-  height: 20px;
+ul.nav a:hover {
+  color: #ec008c;
+  background: #eee;
 }
+
+
+/*----=---- Content ----------*/
 
 h1 {
   position: absolute;
