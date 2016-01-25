@@ -22,7 +22,11 @@ Translucent Black: rgba(0, 0, 0, 0.5);
 /*----------- Body -----------*/
 
 body {
-  background-image: url(../images/background-image.jpg);
+  background: url(../images/background-image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
  
@@ -48,6 +52,7 @@ body {
   background: #ec008c;
   border: none;
   border-radius: 0px;
+  margin-bottom: 0px;
 }
 
 .navbar-default .navbar-nav>li>a{
@@ -89,4 +94,8 @@ h1 {
   letter-spacing: -0.06em;
   text-align: center;
   color: #fff;
+}
+
+#svg-image-blur {
+  display: none;
 }
