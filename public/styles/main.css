@@ -1,8 +1,8 @@
 @import "fonts.css";
 
-/*-------------------------
+/*--------------------------
 Styles
----------------------------
+----------------------------
 
 Media Queries
 
@@ -18,8 +18,13 @@ Light gray: #eee;
 White: #fff;
 Translucent Black: rgba(0, 0, 0, 0.5);
 
- 
-/*------ Hamburger menu ------*/
+-----------------------------*/
+
+
+/*--------------------------- 
+------- Hamburger menu -------
+-----------------------------*/
+
 
 .navbar-toggle {
   float: left;
@@ -41,15 +46,24 @@ Translucent Black: rgba(0, 0, 0, 0.5);
 }
 
 
-/*------- Navbar brand ------- */
+/*-----------------------------
+--------- Navbar brand -------- 
+-----------------------------*/
 
 .nav-brand{
   width: 55px;
   height: 20px;
 }
 
+@media(max-width: 768px){ .navbar-brand>img {
+  display:none;
+}}
 
-/*---- Primary Navigation ----*/
+
+/*-----------------------------
+----- Primary Navigation -----
+-----------------------------*/
+
 
 li {
   margin-right: 10px;
@@ -86,7 +100,15 @@ li {
 }}
 
 
-/*--- Secondary Navigation ---*/
+/*-----------------------------
+---- Secondary Navigation ----
+-----------------------------*/
+
+
+.navbar-inverse {
+    background: rgba(15,0,111,0.6);
+    border-color: #030033;
+}
 
 .dropdown-menu{
   border-radius: 0px;
@@ -98,21 +120,34 @@ li {
   line-height: 48px;
 }
 
+
 ul.nav a {
   color: black;
 }
 
 ul.nav a:hover {
   color: #ec008c;
-  background: #eee;
+  background: #eee !important;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+  color: #ec008c;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: black;
 }
 
 
-/*--------- Content ----------*/
+/*-----------------------------
+--------- Content -------------
+-----------------------------*/
 
+
+/** Huge background image for desktop and mobile**/
 @media (min-width: 768px) { .container-headline {
   background: url(../images/background-image.jpg) no-repeat;
-    -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -120,7 +155,6 @@ ul.nav a:hover {
   position: relative; 
   height: 640px;
 }}
-
 @media (max-width: 768px) { .container-headline {
   background: url(../images/background-image.jpg) no-repeat;
   background-position: center top;
@@ -128,32 +162,39 @@ ul.nav a:hover {
   height: 380px;
   background-size: 100%;
 }}
+@media (max-width: 600px) { .container-headline { height:300px;}}
+@media (max-width: 500px) { .container-headline { height:200px;}}
 
+
+/** Adjust headline text size and font for desktop **/
 @media (min-width: 768px) { .headline {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  margin: 0;
   text-align: center;
   color: #fff;
   font-family: 'HUGEAvantGardeBold';
   font-size: 120px;
   line-height: 132px;
 }}
-
 @media (max-width: 768px) { .headline {
+  display:none;}}
+
+
+/** Adjust headline text size and font for mobile **/
+@media (min-width: 768px) { .mobile-headline {
+  display: none;}}
+@media (max-width: 768px) { .mobile-headline {
   color: black;
   font-family: 'HUGEAvantGardeBold';
   font-size: 44px;
   line-height: 48px;
 }}
 
-@media (max-width: 768px) { .new-line{
-  top: 60%;
-}}
 
+/** Adjust body copy text size and font for mobile and desktop**/
 @media (min-width: 768px) { .body-copy {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -162,16 +203,10 @@ ul.nav a:hover {
   font-size: 24px;
   line-height: 36px;
 }}
-
 @media (max-width: 768px) { .body-copy {
-  margin-top: -40px;
   margin-bottom: 10px;
   color: black;
   font-family: 'Galaxie';
   font-size: 14px;
   line-height: 24px;
 }}
-
-#svg-image-blur {
-  display: none;
-}
